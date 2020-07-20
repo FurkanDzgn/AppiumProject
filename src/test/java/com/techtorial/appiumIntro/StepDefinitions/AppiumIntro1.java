@@ -1,4 +1,4 @@
-package com.techtorial.appiumIntro;
+package com.techtorial.appiumIntro.StepDefinitions;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
