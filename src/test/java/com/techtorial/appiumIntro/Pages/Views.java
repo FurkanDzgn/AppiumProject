@@ -10,9 +10,15 @@ import java.util.List;
 
 public class Views {
 
-    private Views(AndroidDriver driver){ // We can not create an Object Cuz of private
+    private Views(AndroidDriver driver)
+    { // We can not create an Object Cuz of private
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
+
+    public static Views getViewPage(AndroidDriver driver){
+        return new Views(driver);
+    }
+
 
     @AndroidFindBy(accessibility = "Expandable Lists")
     public AndroidElement expandableLists;
@@ -44,13 +50,15 @@ public class Views {
             "//android.widget.TextView[contains(text(),'Names']/following-sibling::android.widget.TextView")
     public List<AndroidElement> allNames;
 
-    @AndroidFindBy(xpath = "android.widget.TextView[position()>1")
+    @AndroidFindBy(xpath = "android.widget.TextView[position()>1]")
     public List<AndroidElement> allText;
 
-    public static Views getViewPage(AndroidDriver driver){
-        return new Views(driver);
+    @AndroidFindBy(uiAutomator = "text(\"People Names\")")
+    public AndroidElement peopleNames;
+
+    @AndroidFindBy(uiAutomator = "text(\"Sample action\")")
+    public AndroidElement sampleAction;
 
 
-    }
 
 }

@@ -23,7 +23,7 @@ public class AppiumIntro1 {
         File apk = new File("src\\test\\resources\\AppiumPractice.apk");
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
-        desiredCapabilities.setCapability("deviceName","Pixel 2 API 28");
+        desiredCapabilities.setCapability("deviceName","Pixel 3 API 28");
         desiredCapabilities.setCapability("platformName","android");
         desiredCapabilities.setCapability("automationName","uiautomator2");
         desiredCapabilities.setCapability("app",apk.getAbsolutePath());
@@ -129,9 +129,6 @@ public class AppiumIntro1 {
         androidDriver.navigate().back();
 
 
-
-
     }
-
 
 }

@@ -14,7 +14,7 @@ import java.util.List;
 
 public class MainPage {
 
-    public MainPage(AndroidDriver driver){
+    private MainPage(AndroidDriver driver){
         // instantiating the elements                                // this is instance (MainPage.class)
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
